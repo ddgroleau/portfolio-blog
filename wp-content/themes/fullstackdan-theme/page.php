@@ -1,11 +1,10 @@
 <?php
 /**
- * Template for dispalying all the pages.
+ * Template for displaying all the pages.
  */
 get_header();
 ?>
 <div>
-    <main>
         <?php
         while ( have_posts() ) :
             the_post();
@@ -17,10 +16,6 @@ get_header();
             endif;
         endwhile;
         ?>
-    </main>
-    <h1>BUTTHOLE page</h1>
-
-    <?php get_sidebar();  ?>
 </div>
 <?php
 get_footer();

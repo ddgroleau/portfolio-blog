@@ -6,8 +6,7 @@ echo get_post_format();
 get_header();
 ?>
 <div>
-    <main>
-        <?php
+    <?php
         while (have_posts() ) :
             the_post();
             get_template_part( 'template-parts/post/content', get_post_format() );
@@ -17,10 +16,7 @@ get_header();
         if ( comments_open() || get_comments_number() ) :
             comments_template();
         endif;
-        ?>
-    </main>
-    <?php get_sidebar();  ?>
+    ?>
 </div>
-<h1>BUTTHOLE single</h1>
 <?php
 get_footer();

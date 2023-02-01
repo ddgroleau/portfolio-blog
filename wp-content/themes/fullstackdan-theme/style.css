@@ -3,8 +3,214 @@ Theme Name: FullStackDan
 Theme URI: https://fullstackdan.com
 Author: Dan Groleau
 Author URI: https://fullstackdan.com
-Description: A theme baby
+Description: The theme for my portfolio blog
 Version: 1.0.0
 Text Domain: fullstackdan
 LICENSE: MIT
 **/
+
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Design System */
+
+:root, html[data-theme="dark"] {
+    --primary: #231A39;
+    --primary-light: #352A66;
+    --primary-light-x: #48418E;
+    --secondary: #FF635F;
+    --secondary-transparent: rgba(255, 99, 95, 0.2);
+    --secondary-light: #F87C62;
+    --text: #FFFFFF;
+    --light: #FFFFFF;
+    --grey: #d8d7db;
+    --grey-dark: #818083;
+    --text-soft: #F0EEEF;
+    --font: 'Roboto', sans-serif;
+    --font-xxl: max(4rem, 5vw);
+    --font-xl: max(2.5rem, 2.5vw);
+    --font-l: max(2rem,2vw);
+    --font-m: max(1.2rem, 1.2vw);
+    --font-s: max(1rem, 1vw);
+    --border-rad: 12px;
+    --invert: .5;
+    --brightness: 2;
+}
+
+html[data-theme="light"]  {
+    --primary: #ffff;
+    --primary-light: #F0EEEF;
+    --primary-light-x: #f3f0f1;
+    --secondary: #da2c27;
+    --secondary-transparent: rgba(233, 187, 185, 0.2);
+    --secondary-light: #FF635F;
+    --text: #231A39;
+    --text-soft: #352A66;
+    --invert: 1.5;
+    --brightness: 0;
+}
+
+*, html {
+    transition: all .4s ease;
+}
+
+/* Global */
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--text-soft);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: var(--font-xxl);
+    margin-block: 2rem;
+    background: -webkit-linear-gradient(left, var(--secondary), var(--primary-light));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: var(--font-l);
+    font-weight: 400;
+    margin-block: 1rem;
+}
+
+p {
+    font-size: var(--font-m);
+    line-height: max(2rem, 2vw);
+}
+
+button {
+    background: none;
+    text-transform: uppercase;
+    font-size: var(--font-m);
+    cursor: pointer;
+}
+
+code {
+    font-family: monospace;
+}
+
+.styled__link {
+    border: solid var(--text) 1px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.styled__link:hover {
+    background-color: var(--text);
+    color: var(--primary);
+    transition: .4s ease-in-out;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: .8s;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Layout */
+.layout__container {
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, var(--primary), var(--primary-light-x));
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.layout__container-inner {
+    min-height: 100vh;
+    max-width: 1600px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding-block: 0.5rem;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+    gap: 1rem;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--secondary-light);
+}
+
+
+/* Header */
+
+nav a:nth-child(1) {
+    animation: slideDown 1s ease-in-out forwards;
+    opacity: 0;
+}
+nav a:nth-child(2) {
+    animation: slideDown 1s ease-in-out .2s forwards;
+    opacity: 0;
+}
+nav a:nth-child(3) {
+    animation: slideDown 1s ease-in-out .4s forwards;
+    opacity: 0;
+}
+nav a:nth-child(4) {
+    animation: slideDown 1s ease-in-out .6s forwards;
+    opacity: 0;
+}
+
+nav a {
+    position: relative;
+    z-index: 2;
+}
+
+.icon__link:hover {
+    filter: invert(var(--invert)) brightness(var(--brightness));
+    cursor: pointer;
+ }
+
+ nav {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    justify-content: flex-end;
+    padding-top: 2rem;
+    flex-flow: row wrap;
+}

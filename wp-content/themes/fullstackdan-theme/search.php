@@ -4,13 +4,9 @@
  */
 get_header();
 ?>
-
-<div id="primary" class="search-content-area">
-    <h1>BUTTHOLE search</h1>
-    <main>
-        <?php
+<div>
+    <?php
         if ( have_posts() ) :
-                // Start the loop.
                 while ( have_posts() ) :
                     the_post();
                     get_template_part( 'template-parts/page/content', 'search' );
@@ -23,10 +19,8 @@ get_header();
 
         else :
             get_template_part( 'template-parts/page/content', 'none' );
-        ?>
-        <?php endif; ?>
-    </main>
+        endif; 
+    ?>
 </div>
-
 <?php
 get_footer();

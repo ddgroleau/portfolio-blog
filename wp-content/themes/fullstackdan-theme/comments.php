@@ -26,7 +26,6 @@ if ( post_password_required() ) {
             ?>
         </h2>
         <?php the_comments_navigation(); ?>
-        <h1>BUTTHOLE comments</h1>
         <ol>
             <?php
             wp_list_comments( [
@@ -47,7 +46,7 @@ if ( post_password_required() ) {
         ?>
     <?php
     endif;
-    // Show commetns form.
+    // Show comments form.
     comment_form();
     ?>
 

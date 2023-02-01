@@ -5,7 +5,6 @@
 get_header();
 ?>
 <div >
-    <main>
         <?php
         if ( have_posts() ) :
             while ( have_posts() ) :
@@ -21,7 +20,6 @@ get_header();
             get_template_part( 'template-parts/page/content', 'none' );
         endif;
         ?>
-    </main>
 </div>
 <?php
 get_footer();

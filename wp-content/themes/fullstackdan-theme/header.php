@@ -14,6 +14,8 @@
     <?= wp_head(); ?>
 </head>
 <body <?= body_class();?>>
-<header>
-    <h1>Blog</h1>
-</header>
+<main class="layout__container">
+    <section class="layout__container-inner">
+        <header>
+            <h1>Blog</h1>
+        </header>

@@ -3,12 +3,10 @@
  * Contains footer
  */
 ?>
-
-<footer>
-
-</footer>
-
-<?= wp_footer(); ?>
-
-</body>
+                <footer>
+                </footer>
+            </section>
+        </main>
+    <?= wp_footer(); ?>
+    </body>
 </html>
